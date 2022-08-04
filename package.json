@@ -1,0 +1,23 @@
+{
+  "name": "englishdud.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Englishdud/Englishdud.github.io.git"
+  },
+  "keywords": [],
+  "author": "Englishdud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Englishdud/Englishdud.github.io/issues"
+  },
+  "homepage": "https://github.com/Englishdud/Englishdud.github.io#readme",
+  "dependencies": {
+    "firebase": "^9.9.1"
+  }
+}

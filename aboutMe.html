@@ -10,7 +10,7 @@
       .loader_bg {
         position: fixed;
         z-index: 999999;
-        background-color: white;
+        background-color: rgb(162, 212, 237);
         width: 100%;
         height: 100%;
       }
@@ -27,7 +27,7 @@
 
       .loader:before, .loader:after {
         content: "";
-        border: 1em solid #0fb2dbd7;
+        border: 1em solid #31c754d7;
         border-radius: 50%;
         width: inherit;
         height: inherit;
@@ -81,10 +81,9 @@
             </li>
           </ul>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-            <span class><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16">
-                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
-              </svg></span>
+            <span class><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+            </svg></span>
           </button>
           <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
@@ -98,6 +97,9 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Me</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

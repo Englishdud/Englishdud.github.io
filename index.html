@@ -1,19 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jacob Varughese</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Test Website</title>
     <style>
-
-      .loader_bg {
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+    * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato';
+    }
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0d0f1b;
+    }
+    ul {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    ul li {
+        list-style: none;
+    }
+    
+    ul li a {
+        position: relative;
+        display: inline-block;
+        padding: 6px 15px;
+        text-decoration: none;
+        background: #2196f3;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        overflow: hidden;
+        transition: 0.5s;
+        z-index: 1;
+    }
+    ul:hover li a {
+        opacity: 0.02;
+    }
+    ul li a:hover {
+        transform: scale(1.4);
+        z-index: 1000;
+        background: #8f3fff;
+        opacity: 1;
+    }
+    ul li:before {
+        content: attr(data-text);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 6em;
+        font-weight: 700;
+        pointer-events: none;
+        opacity: 0;
+        letter-spacing: 20px;
+        transition: 0.5s;
+        white-space: nowrap;
+    }
+    ul li:hover:before {
+        opacity: 0.07;
+        letter-spacing: 0px;
+    }
+    ul li a:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100px;
+        width: 80px;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+        transform: skewX(35deg);
+        transition: 0s;
+    }
+    ul li a:hover:before {
+        left: calc(100% + 100px);
+        transition: 0.5s;
+        transition-delay: 0.2s;
+    }
+    .loader_bg {
         position: fixed;
         z-index: 999999;
-        background-color: white;
+        background-color: #0d0f1b;
         width: 100%;
         height: 100%;
       }
@@ -57,219 +133,22 @@
           opacity: 0;
         }
       }
-
-        body {
-          background-color: rgba(24, 23, 23, 0.864);
-        }
-        .heroimage {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/portraitLandscape2.jpg");
-          height: 50%;
-          background-position: center;
-          background-size: cover;
-          height: 100vh;
-        }
-        .herotext {
-          text-align: right;
-          position:relative;
-          top: 40%;
-          margin-right: 20px;
-          color: white;
-        }
-        .coloriscool {
-          background-color: rgb(31, 121, 224);
-          color: white;
-        }
-        .coloriscool:hover {
-          background-color: white;  
-          color: rgb(31, 121, 224);
-        }
-        .bgim {
-          margin-top: 30px;
-          background-image: url("Images/speech.jpg");
-          background-size: cover;
-          background-position: center;
-          height: 50vh;
-          border-radius: 10px;
-        }
-        .OODOWE {
-          color: white;
-          font-size: 40px;
-          font-family: 'Roboto', sans-serif;
-          text-align: center;
-          margin-top: 25%;
-        }
-        .drop {
-          animation: dropIn 1s ease forwards;
-        }
-        @keyframes dropIn {
-         from {transform: translateY(-500px);} 
-          to {transform: translateY(0px);}
-        }
-        .ace {
-          animation-delay: 1600ms;
-        }
-        .dace {
-          animation-delay: 1700ms;
-        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="loader_bg">
-      <div class="loader"></div>
-    </div>
-    <!-- <nav class="navbar navbar-expand-lg bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" >
-              <img src="Portfolio/Pictures/Logo-removebg-preview.png" width="65">
-                Jacob Varughese
-            </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link" href="#projects">Projects</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#about">About Me</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#contactiscool">Contact</a>
-                  </li>
-              </ul>
-          </div>
-          </div>   
-      </nav> -->
-      <!-- <nav class="navbar navbar-expand-lg"  style="background-color: #e3f2fd;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            For Certs Search <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav> -->
-      <nav class="navbar navbar-dark bg-dark fixed-top" style="opacity: 97%;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Jacob Varughese</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-            <span class=""><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-              <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-            </svg></span>
-          </button>
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Jacob Varughese</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="aboutMe.html">About Me</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Me</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    <div class="heroimage">
-        <div class="herotext">
-          <h1 style="font-size: 60px;" class="drop ace">Jacob Varughese</h1>
-          <div class="text-right mt-3"><a href="aboutMe.html" class="btn coloriscool drop dace"><b>Get to know more <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
-          </svg></b></a></div>
-        </div>
+        <div class="loader"></div>
       </div>
-      <div class="alert alert-info" role="alert">
-        This is a work in progress site.
-      </div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div>
-              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="Images/cringe.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Images/speech.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Images/portraitLandscape.jpg" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div><p class="OODOWE">Over One Decade Of Working Experience.</p></div>
-          </div>
-        </div>
-      </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <ul>
+        <li data-text="Home"><a href="home.html">Home</a></li>
+        <li data-text="Contact"><a href="contact.html">Contact</a></li>
+        <li data-text="About"><a href="aboutMe.html">About</a></li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script>
       setTimeout(function(){
         $(".loader_bg").fadeToggle("slow");
       }, 1500);
       </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  </body>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
 </html>

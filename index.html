@@ -106,7 +106,7 @@
 
       .loader:before, .loader:after {
         content: "";
-        border: 1em solid #0fb2dbd7;
+        /* border: 1em solid #0fb2dbd7; */
         border-radius: 50%;
         width: inherit;
         height: inherit;
@@ -133,11 +133,19 @@
           opacity: 0;
         }
       }
+      .cool1 {
+        display: flex;
+        color: white;
+        text-align: center;
+        font-size: 2em;
+        justify-content: center;
+        font-family: 'Lato';
+      }
     </style>
 </head>
 <body>
     <div class="loader_bg">
-        <div class="loader"></div>
+        <div class="loader"><p class="cool1">This Website Is Optimized for a computer.</p></div>
       </div>
     <ul>
         <li data-text="Home"><a href="home.html">Home</a></li>
@@ -148,7 +156,7 @@
       <script>
       setTimeout(function(){
         $(".loader_bg").fadeToggle("slow");
-      }, 1500);
+      }, 3000);
       </script>
 </body>
 </html>

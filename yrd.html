@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Start Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+    * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato';
+    }
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0d0f1b;
+    }
+    ul {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    ul li {
+        list-style: none;
+    }
+    
+    ul li a {
+        position: relative;
+        display: inline-block;
+        padding: 6px 15px;
+        text-decoration: none;
+        background: #2196f3;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        overflow: hidden;
+        transition: 0.5s;
+        z-index: 1;
+    }
+    ul:hover li a {
+        opacity: 0.02;
+    }
+    ul li a:hover {
+        transform: scale(1.4);
+        z-index: 1000;
+        background: #8f3fff;
+        opacity: 1;
+    }
+    ul li:before {
+        content: attr(data-text);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 6em;
+        font-weight: 700;
+        pointer-events: none;
+        opacity: 0;
+        letter-spacing: 20px;
+        transition: 0.5s;
+        white-space: nowrap;
+    }
+    ul li:hover:before {
+        opacity: 0.07;
+        letter-spacing: 0px;
+    }
+    ul li a:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100px;
+        width: 80px;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+        transform: skewX(35deg);
+        transition: 0s;
+    }
+    ul li a:hover:before {
+        left: calc(100% + 100px);
+        transition: 0.5s;
+        transition-delay: 0.2s;
+    }
+    .loader_bg {
+        position: fixed;
+        z-index: 999999;
+        background-color: #0d0f1b;
+        width: 100%;
+        height: 100%;
+      }
+
+      .loader {
+        border: 0 solid transparent;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: calc(50vh - 75px);
+        left: calc(50vw - 75px);
+      }
+
+      .loader:before, .loader:after {
+        content: "";
+        /* border: 1em solid #0fb2dbd7; */
+        border-radius: 50%;
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: loader 2s linear infinite;
+        opacity: 0;
+      }
+
+      .loader:before {
+        animation-delay: 0.5s;
+      }
+      @keyframes loader {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+      .cool1 {
+        display: flex;
+        color: white;
+        text-align: center;
+        font-size: 2em;
+        justify-content: center;
+        font-family: 'Lato';
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="loader_bg">
+        <div class="loader"><p class="cool1">This Website Is Optimized for a computer.</p></div>
+      </div>
+    <ul>
+        <li data-text="Home"><a href="home.html">Home</a></li>
+        <li data-text="Contact"><a href="contact.html">Contact</a></li>
+        <li data-text="About"><a href="aboutMe.html">About</a></li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+      setTimeout(function(){
+        $(".loader_bg").fadeToggle("slow");
+      }, 3000);
+      </script>
+</body>
+</html>

@@ -229,13 +229,23 @@
 }
 .hidden{
   opacity: 0;
-  transition: all 1s;
+  filter: blur(30px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
 }
 .show{
   opacity: 1;
   font-family: 'Rowdies', cursive;
   font-weight: 50;
+  filter: blur(0);
+  transform: translateX(0);
   
+}
+.certcard:nth-child(2){
+  transition-delay: 1s;
+}
+.certcard:nth-child(3){
+  transition-delay: 1.5s;
 }
     </style>
   </head>
@@ -243,64 +253,6 @@
     <div class="loader_bg">
       <div class="loader"></div>
     </div>
-    <!-- <nav class="navbar navbar-expand-lg bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" >
-              <img src="Portfolio/Pictures/Logo-removebg-preview.png" width="65">
-                Jacob Varughese
-            </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link" href="#projects">Projects</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#about">About Me</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#contactiscool">Contact</a>
-                  </li>
-              </ul>
-          </div>
-          </div>   
-      </nav> -->
-      <!-- <nav class="navbar navbar-expand-lg"  style="background-color: #e3f2fd;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            For Certs Search <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav> -->
       <nav class="navbar navbar-dark bg-dark fixed-top" style="opacity: 97%;">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">Jacob Varughese</a>
@@ -321,22 +273,18 @@
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="aboutMe.html">About Me</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact Me</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Secret Stuff
+                    Menu
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark">
                     <li><a class="dropdown-item" href="index.html">Start Page</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="yrd.html">Tabs</a></li>
                     <li>
                       <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
                 </li>
               </ul>
@@ -426,9 +374,38 @@
             </div>
               <!-- <img src="Images/cringe.jpg" class="d-block w-100 hidden" style="border-radius: 50px;" alt="..."> -->
             </div>
+          
+        </div>
+        <h5 class="OODOWE hidden" style="font-size: 20px; margin-right: 100px; margin-left: 100px;">In my prior role, I was the Learning Leader for Indirect Tax and Tax Technology & Transformation. Prior to this, I was a Global Program Manager for the Tax service line to build, deploy, and manage the ever-successful Digital Tax program across all geographic areas of EY. I’ve also supported the EY GDS Operations/ Enablement Services leader in an Operations manager capacity. I helped design, develop and/or implement initiatives that contribute to the future of EY,recognizing the risks and opportunities of social/political/environmental trends, seeking and enabling innovative solutions</h5>
+      </div>
+    </section>
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <img src="ey.jpg"  class="hidden" alt="" width="800px" style="margin-top: 250px; border-radius: 100px;"/>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h5 class="OODOWE hidden" style="display: flex; align-items: center; text-align: center; justify-content: center; padding-top: 25%;">In my present professional capacity, I manage and drive Strategic Operations aspects for the Tax Technology & Transformation sub-service line within the Tax Service line in EY for the Americas area. </h5>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 certcard">
+            <img src="CMP.jpg" class="hidden" alt="" width="300px" style="margin-top: 250px; border-radius: 100px; margin-left: 25%;"/>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 certcard">
+            <img src="PMP.jpg" class="hidden" alt="" width="300px" style="margin-top: 250px; border-radius: 100px; margin-left: 25%; transition-delay: 200ms;"/>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 certcard">
+            <img src="eydb.jpg" class="hidden" alt="" width="300px" style="margin-top: 250px; border-radius: 100px; margin-left: 25%; transition-delay: 400ms;"/>
+          </div>
+        </div>
+      </div>
+    </section>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script>
       setTimeout(function(){
